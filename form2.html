@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Information</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    </head>
+<style>
+table, th, td {
+  border:1.5px solid black;
+}
+</style>
+<body>
+<h2 style="text-align: center;margin-top: 100px;">Most used Words</h2>
+
+<centre>
+<table style="width:50%;margin-left: 400px;">
+  <tr>
+    <th>Word</th>
+    <th>Total Occurrence</th>
+  </tr>
+  {{range .Response}} 
+    <tr>
+    <td>{{.Word}}</td>
+    <td>{{.Count}}</td>
+    </tr>
+  {{end}}
+</centre>
+</body>
+</html>
+
